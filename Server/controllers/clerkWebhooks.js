@@ -4,7 +4,6 @@ import {Webhook} from "svix";
 const clerkWebhooks = async (request, response) => {
     try {
         const wHook = new Webhook(process.env.CLERK_WEBHOOK_SECRET);
-        console.log('1. Welcome to clerkwebhooks file');
 
         const headers = {
             'svix-id': request.headers['svix-id'],
@@ -23,16 +22,21 @@ const clerkWebhooks = async (request, response) => {
             image: data.image_url,
         }
 
-        console.log('2. to clerkwebhooks file');
-
-        console.log(userData);
-
         switch (type) {
             case 'user.created':
-                await User.create(userData);
+                try {
+                    await User.create(userData);
+                    console.log('User created');
+                } catch (err) {
+                    console.error('Mongoose create error:', err.message);
+                }
                 break;
             case 'user.updated':
-                await User.findByIdAndUpdate(data.id, userData);
+                try {
+                    await User.findByIdAndUpdate(data.id, userData);
+                } catch (err) {
+                    console.error('Mongoose update error:', err.message);
+                }
                 break;
             case 'user.deleted':
                 await User.findByIdAndDelete(data.id);
@@ -43,8 +47,8 @@ const clerkWebhooks = async (request, response) => {
 
         response.json({success: true, message: 'Webhook received successfully.'});
     } catch (e) {
-        console.log(e.message)
-        response.json({success: false, message: e.message});
+        console.error('Webhook error:', e);
+        response.status(500).json({success: false, message: 'Internal Server Error'});
     }
 }
 
