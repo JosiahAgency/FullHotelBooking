@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "builds ": [
+  "builds": [
     {
       "src": "main-server.js",
       "use": "@vercel/node",
@@ -11,7 +11,7 @@
       }
     }
   ],
-  "routes ": [
+  "routes": [
     {
       "src": "/(.*)",
       "dest": "main-server.js"
