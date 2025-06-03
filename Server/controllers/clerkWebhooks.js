@@ -15,24 +15,29 @@ const clerkWebhooks = async (request, response) => {
 
         const {data, type} = request.body;
 
-        const userData = {
-            _id: data.id,
-            email: data.email_addresses[0].email_address,
-            name: data.first_name + ' ' + data.last_name,
-            image: data.image_url,
-        }
-
         switch (type) {
             case 'user.created':
                 try {
+                    const userData = {
+                        _id: data.id,
+                        email: data.email_addresses[0].email_address,
+                        name: data.first_name + ' ' + data.last_name,
+                        image: data.image_url,
+                    }
+
                     await User.create(userData);
-                    console.log('User created');
                 } catch (err) {
                     console.error('Mongoose create error:', err.message);
                 }
                 break;
             case 'user.updated':
                 try {
+                    const userData = {
+                        _id: data.id,
+                        email: data.email_addresses[0].email_address,
+                        name: data.first_name + ' ' + data.last_name,
+                        image: data.image_url,
+                    }
                     await User.findByIdAndUpdate(data.id, userData);
                 } catch (err) {
                     console.error('Mongoose update error:', err.message);
