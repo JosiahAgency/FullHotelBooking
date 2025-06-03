@@ -1,12 +1,9 @@
-<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_4285_394)">
-<path d="M16.6667 1.66602H3.33341C2.41294 1.66602 1.66675 2.41221 1.66675 3.33268V16.666C1.66675 17.5865 2.41294 18.3327 3.33341 18.3327H16.6667C17.5872 18.3327 18.3334 17.5865 18.3334 16.666V3.33268C18.3334 2.41221 17.5872 1.66602 16.6667 1.66602Z" stroke="#4C88FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12.9168 10H7.0835" stroke="#4C88FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M10 12.9154V7.08203" stroke="#4C88FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-<defs>
-<clipPath id="clip0_4285_394">
-<rect width="20" height="20" fill="white"/>
-</clipPath>
-</defs>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;">
+    <g>
+        <path d="M16.667,1.666L3.333,1.666C2.413,1.666 1.667,2.412 1.667,3.333L1.667,16.666C1.667,17.587 2.413,18.333 3.333,18.333L16.667,18.333C17.587,18.333 18.333,17.587 18.333,16.666L18.333,3.333C18.333,2.412 17.587,1.666 16.667,1.666Z" style="fill:none;fill-rule:nonzero;stroke:rgb(255,103,0);stroke-width:2px;"/>
+        <path d="M12.917,10L7.084,10" style="fill:none;fill-rule:nonzero;stroke:rgb(255,103,0);stroke-width:2px;"/>
+        <path d="M10,12.915L10,7.082" style="fill:none;fill-rule:nonzero;stroke:rgb(255,103,0);stroke-width:2px;"/>
+    </g>
 </svg>

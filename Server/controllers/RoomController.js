@@ -18,7 +18,7 @@ export const createRoom = async (request, response) => {
         })
         const images = await Promise.all(uploadImages)
 
-        await room.create({
+        await Room.create({
             roomType, pricePerNight: +pricePerNight, amenities: JSON.parse(amenities), images, hotel: hotel._id,
         })
 
@@ -48,7 +48,7 @@ export const getAllRooms = async (request, response) => {
 
 export const getOwnerRooms = async (request, response) => {
     try {
-        const hotelData = await Hotel({
+        const hotelData = await Hotel.findOne({
             owner: request.auth.userId,
         })
         const rooms = await Room.find({
@@ -68,7 +68,7 @@ export const toggleRoomAvailability = async (request, response) => {
         const roomData = await Room.findById(roomId)
         roomData.isAvailable = !roomData.isAvailable
         await roomData.save()
-        response.json({success: true, message: 'Room availability toggled successfully'})
+        response.json({success: true, message: 'Room availability updated successfully'})
 
     } catch (e) {
         response.json({success: false, message: e.message})

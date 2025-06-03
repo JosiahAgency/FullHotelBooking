@@ -16,7 +16,7 @@ const Sidebar = () => {
             {sidebarLinks.map((link, i) => (
                     <NavLink to={link.path} key={i} end='/owner'
                              className={({isActive}) => `flex items-center py-3 px-4 md:px-8 gap-3 ${isActive ? 'border-r-4 md:border-r-[6px] bg-orange-600/10 border--blue-600 text-orange-600' : 'hover:bg-gray-100/90 border-white text-gray-700'}`}>
-                        <img src={link.icon} alt={link.name} className={`min-w-6 min-h-6`}/>
+                        <img src={link.icon} alt={link.name} className={`w-6`}/>
                         <p className={`md:block hidden text-center`}>{link.name}</p>
                     </NavLink>
                 )

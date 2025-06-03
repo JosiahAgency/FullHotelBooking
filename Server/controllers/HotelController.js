@@ -18,6 +18,6 @@ export const registerHotel = async (request, response) => {
         await User.findByIdAndUpdate(owner, {role: "hotelOwner"})
         response.json({success: true, message: 'Hotel registered successfully'})
     } catch (e) {
-        response.json({success: false, message: e.message})
+        response.json({success: false, message: `${e.message}`})
     }
 }

@@ -1,6 +1,8 @@
-<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="48" height="48" rx="4" fill="#2563EB" fill-opacity="0.1"/>
-<path d="M24.0001 37.3327C31.3639 37.3327 37.3334 31.3632 37.3334 23.9994C37.3334 16.6356 31.3639 10.666 24.0001 10.666C16.6363 10.666 10.6667 16.6356 10.6667 23.9994C10.6667 31.3632 16.6363 37.3327 24.0001 37.3327Z" stroke="#3A7CFF" stroke-width="2.5"/>
-<path d="M24 16V32" stroke="#3A7CFF" stroke-width="2.5" stroke-linecap="round"/>
-<path d="M28 20.6673C28 18.8264 26.2092 17.334 24 17.334C21.7908 17.334 20 18.8264 20 20.6673C20 22.5083 21.7908 24.0007 24 24.0007C26.2092 24.0007 28 25.4931 28 27.334C28 29.1749 26.2092 30.6673 24 30.6673C21.7908 30.6673 20 29.1749 20 27.334" stroke="#3A7CFF" stroke-width="2.5" stroke-linecap="round"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <path d="M48,4L48,44C48,46.208 46.208,48 44,48L4,48C1.792,48 0,46.208 0,44L0,4C0,1.792 1.792,0 4,0L44,0C46.208,0 48,1.792 48,4Z" style="fill:rgb(207,38,0);fill-opacity:0.1;"/>
+    <path d="M24,37.333C31.364,37.333 37.333,31.363 37.333,23.999C37.333,16.636 31.364,10.666 24,10.666C16.636,10.666 10.667,16.636 10.667,23.999C10.667,31.363 16.636,37.333 24,37.333Z" style="fill:none;fill-rule:nonzero;stroke:rgb(255,88,0);stroke-width:2.5px;"/>
+    <path d="M24,16L24,32" style="fill:none;fill-rule:nonzero;stroke:rgb(255,88,0);stroke-width:2.5px;stroke-linecap:round;"/>
+    <path d="M28,20.667C28,18.826 26.209,17.334 24,17.334C21.791,17.334 20,18.826 20,20.667C20,22.508 21.791,24.001 24,24.001C26.209,24.001 28,25.493 28,27.334C28,29.175 26.209,30.667 24,30.667C21.791,30.667 20,29.175 20,27.334" style="fill:none;fill-rule:nonzero;stroke:rgb(255,88,0);stroke-width:2.5px;stroke-linecap:round;"/>
 </svg>

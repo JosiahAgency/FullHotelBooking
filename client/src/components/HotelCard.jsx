@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from "react-router-dom";
 import {assets} from "../assets/assets.js";
 
-const HotelCard = ({room, index}) => {
+const HotelCard = ({room, index, currency}) => {
     return (
         <Link
             className={`relative max-w-70 w-full rounded-xl overflow-hidden bg-white text-gray-500/90 shadow-[0px_4px_4px_rgba(0,0,0,0.05)]`}
@@ -28,7 +28,7 @@ const HotelCard = ({room, index}) => {
                 </div>
                 <div className={`flex items-center justify-between mt-4`}>
                     <p>
-                        <span className={`text-xl text-gray-800`}>${room.pricePerNight}</span>
+                        <span className={`text-xl text-gray-800`}>{currency} {room.pricePerNight}</span>
                         /Night
                     </p>
                     <button

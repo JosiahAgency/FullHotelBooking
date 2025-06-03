@@ -1,17 +1,43 @@
 import {assets, cities} from "../assets/assets.js";
+import {useState} from "react";
+import {useAppContext} from "../context/AppContext.jsx";
 
 const BookForm = ({className}) => {
 
+    const {navigate, getToken, axios, setSearchCities} = useAppContext()
+    const [destination, setDestination] = useState('')
+
+    const handleSearch = async (e) => {
+        e.preventDefault()
+        navigate(`/rooms?destination=${destination}`)
+        await axios.post('/api/user/store-recent-search', {recentSearchCity: destination}, {
+            headers: {
+                Authorization: `Bearer ${getToken()}`
+            }
+        })
+        setSearchCities((prevSearchedCities) => {
+            const updatedSearchedCities = [...prevSearchedCities, destination]
+            if (updatedSearchedCities.length > 3) {
+                updatedSearchedCities.shift()
+            }
+            return updatedSearchedCities
+        })
+    }
+
     return (
-        <form
-            className={`bg-white text-gray-500 rounded-lg px-6 py-4 flex flex-col lg:flex-row max-md:items-start gap-4 max-md:mx-auto ${className}`}>
+        <form onSubmit={handleSearch}
+              className={`bg-white text-gray-500 rounded-lg px-6 py-4 flex flex-col lg:flex-row max-md:items-start gap-4 max-md:mx-auto ${className}`}>
 
             <div>
                 <div className='flex items-center gap-2'>
                     <img src={assets.calenderIcon} alt='calender' className=' h-4 text-gray-800'/>
                     <label htmlFor="destinationInput">Destination</label>
                 </div>
-                <input list='destinations' id="destinationInput" type="text"
+                <input onChange={(e) => setDestination(e.target.value)}
+                       value={destination}
+                       list='destinations'
+                       id="destinationInput"
+                       type="text"
                        className=" rounded border border-gray-200 px-3 py-1.5 mt-1.5 text-sm outline-none"
                        placeholder="Type here" required/>
                 <datalist id='destinations'>
